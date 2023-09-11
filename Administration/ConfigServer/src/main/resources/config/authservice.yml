@@ -1,0 +1,3 @@
+server:
+  port:8333
+message : Hello world
