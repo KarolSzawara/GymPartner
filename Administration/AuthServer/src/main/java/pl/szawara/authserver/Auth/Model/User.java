@@ -6,6 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.*;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import pl.szawara.authserver.Register.model.RegisterUser;
 
 import java.util.ArrayList;
@@ -43,11 +44,11 @@ public class User  {
     @Column
     private Boolean enabled;
 
-    public User(RegisterUser user){
+    public User(RegisterUser user, PasswordEncoder passwordEncoder){
         this.email= user.email();;
         this.birthDate=user.birtDate();
         this.enabled=true;
-        this.password=user.password();
+        this.password=passwordEncoder.encode(user.password());
         this.firstName= user.firstName();
         this.lastName= user.lastName();
         this.roles=new ArrayList<>(List.of(Role.USER));

@@ -29,6 +29,7 @@ public class AuthController {
         return ResponseEntity.ok().build();
     }
     @Operation(summary = "Login user")
+    @PostMapping("/login")
     public ResponseEntity<String> loginUser(@RequestBody AuthRequest authRequest){
         var token=loginService.loginUser(authRequest);
         if(token.isPresent()){

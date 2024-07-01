@@ -14,7 +14,7 @@ import java.util.Map;
 
 @Component
 public class JwtService {
-    public static final String SECRET="6500703933257012948208681463081259978395";
+    public static final String SECRET="6500703933252323237012948208681463081259978395";
 
     public void validateToken(final String token){
         Jwts.parserBuilder().setSigningKey(getSignKey()).build().parseClaimsJwt(token);
