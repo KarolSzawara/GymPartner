@@ -1,4 +1,6 @@
 spring:
+  main:
+    allow-bean-definition-overriding: true
   application:
     name: authservice
   cloud:
@@ -11,6 +13,14 @@ spring:
         multiplier: 1.5
         max-interval: 6000
         max-attempts: 100
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/users
+    username: root
+    password: root
 eureka:
   client:
     service-url:
@@ -19,4 +29,9 @@ eureka:
   instance:
     lease-renewal-interval-in-seconds: 10
 server:
-  port: 0
+  port: 50798
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger.html

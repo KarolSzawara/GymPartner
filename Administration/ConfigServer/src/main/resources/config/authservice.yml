@@ -1,3 +1,13 @@
 server:
   port:8333
 message : Hello world
+springbootwebfluxjwt:
+  password:
+    encoder:
+      secret: mysecret
+      iteration : 33
+      keylength : 256
+auth:
+  jwt:
+    secret: newSecret
+    dayExpiration: 2
