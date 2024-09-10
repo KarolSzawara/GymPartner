@@ -11,13 +11,10 @@ import pl.szawra.getwayserver.util.JwtUntil;
 public class AuthenticationFilter extends AbstractGatewayFilterFactory<AuthenticationFilter.Config> {
     @Autowired
     private RouteValidator validator;
-
     @Autowired
-    private JwtUntil jwtUtil;
+    private final JwtUntil jwtUtil=new JwtUntil();
 
-    public AuthenticationFilter() {
-        super(Config.class);
-    }
+
     @Override
     public GatewayFilter apply(Config config) {
         return ((exchange, chain) -> {

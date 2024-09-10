@@ -12,7 +12,8 @@ public class RouteValidator {
             "/auth/register",
             "/auth/valid",
             "/auth/login",
-            "/eureka"
+            "/eureka",
+            "/swagger.html"
     ) ;
     public Predicate<ServerHttpRequest> isSecured= serverHttpRequest -> openApiEndpoints
             .stream()

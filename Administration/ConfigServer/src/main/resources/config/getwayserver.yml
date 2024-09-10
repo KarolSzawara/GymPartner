@@ -1,3 +1,5 @@
+server:
+  port: 8090
 spring:
   cloud:
     gateway:
@@ -9,8 +11,8 @@ spring:
       discovery:
         locator:
           enabled: true
-  application:
-    name: GATEWAY
+jwt:
+  secret: 6500703933252323237012948208681463081259978395
 eureka:
   client:
     service-url:
