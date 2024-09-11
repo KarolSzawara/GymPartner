@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: getwayserver
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIGSERVER
+      retry:
+        initial-interval: 2000
+        multiplier: 1.5
+        max-interval: 6000
+        max-attempts: 100
+  config:
+    import: "optional:configserver:"

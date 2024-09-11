@@ -11,6 +11,7 @@
     <groupId>pl.szawara</groupId>
     <artifactId>GymPartner</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>GymPartner</name>
     <description>GymPartner</description>
     <properties>
