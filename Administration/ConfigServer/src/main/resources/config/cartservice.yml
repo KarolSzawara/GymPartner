@@ -5,3 +5,10 @@ datasource:
   url: jdbc:mysql://localhost:3306/cart
   username: root
   password: root
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: gym
+      auto-index-creation: true
