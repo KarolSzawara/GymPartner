@@ -8,6 +8,6 @@ import lombok.Data;
 @AllArgsConstructor
 @Builder
 public class CreateCartEvent {
-    String userId;
-    String userEmail;
+    private String userId;
+    private String userEmail;
 }

@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Created-By: IntelliJ IDEA
 Built-By: 142ka
-Build-Jdk: Oracle OpenJDK version 20.0.2
+Build-Jdk: Oracle OpenJDK 20.0.2
 Implementation-Title: GetwayServer
 Implementation-Version: 0.0.1-SNAPSHOT
 Implementation-Vendor-Id: pl.szawra

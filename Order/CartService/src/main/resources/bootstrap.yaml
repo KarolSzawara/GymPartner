@@ -13,4 +13,17 @@ spring:
         multiplier: 1.5
         max-interval: 6000
         max-attempts: 100
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        cart-events-out:
+          destination: cart-events
+          content-type: application/json
+        cart-events-in:
+          destination: cart-events
+          content-type: application/json
+          group: cart-service-group
+
 
